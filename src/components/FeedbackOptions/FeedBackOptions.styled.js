@@ -5,11 +5,11 @@ const color = 'black';
 const setBgColor = props => {
     switch (props.name) {
         case 'good':
-            return 'green';
+            return '#00FF00';
         case 'neutral':
-            return 'yellow'; 
+            return '#FFFF00'; 
         case 'bad':
-            return 'red'; 
+            return '#D61800'; 
         default:
             return 'black'    
     }
@@ -21,7 +21,9 @@ gap: 15px;
 justify-content: space-around;
 `;
 
-export const Item = styled.li``;
+export const Item = styled.li`
+list-style: none;
+`;
 
 export const Button = styled.button`
 
