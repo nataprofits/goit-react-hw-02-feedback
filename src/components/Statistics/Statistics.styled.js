@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 export const List = styled.ul`
   font-size: 20px;
   padding: 20px;
-
+  list-style: none;
   border: 2px solid aqua;
   border-radius: 50px;
 `;
