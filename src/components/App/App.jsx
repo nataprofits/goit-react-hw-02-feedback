@@ -37,15 +37,15 @@ export class App extends Component {
       return (
     <div>
       <Section title="Please leave feedback">
+        <FeedBackOptions
+        options = {optionsForFeedback}
+        onLeaveFeedback={this.onLeaveFeedback}
+        />
+      </Section>
 
-      <FeedBackOptions
-      options = {optionsForFeedback}
-      onLeaveFeedback={this.onLeaveFeedback}
-      />
-    </Section>
-
-      {countTotalFeedback > 0 ? <Section title="Statistics">
-<Statistics good={good} neutral={neutral} bad={bad} total={countTotalFeedback} positivePercentage={countPositiveFeedbackProcentage} />
+      {countTotalFeedback > 0 ? 
+      <Section title="Statistics">
+        <Statistics good={good} neutral={neutral} bad={bad} total={countTotalFeedback} positivePercentage={countPositiveFeedbackProcentage} />
       </Section>: <Notification message="There is no feedback" />}
     </div>
   )
